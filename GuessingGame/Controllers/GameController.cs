@@ -23,6 +23,8 @@ namespace GuessingGame.Controllers
         }
 
         [HttpPost]
+        [ValidateAntiForgeryToken]
+
         public ActionResult Index(GameModel model)
         {
             if (ModelState.IsValid)
